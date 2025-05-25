@@ -7,7 +7,8 @@ const port = 3000;
 
 app.get("/", (req, res) => {
   let name = superheroes.random();
-  res.send(`<h1>Behold, I am ${name}!</h1>`);
+  let sidekickName = superheroes.random();
+  res.send(`<h1>Behold, I am ${name}! And my sidekick is ${sidekickName}!</h1>`);
 });
 
 app.listen(port, () => {
